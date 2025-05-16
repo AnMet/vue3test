@@ -34,4 +34,20 @@ npm run build
 
 # Run preview production server after build
 npm run serve
+
+## ABOUT THE PROJECT
+
+# Summary Checklist
+Project Setup:	Vite, TypeScript, ESLint/Prettier
+Routing:	Vue Router 4 with lazy loading & guards
+State Management:	Pinia with modules, persisted state
+Composition API:	<script setup>, composables, Provide/Inject
+API Integration:	Typed composables with loading/error states
+Forms:	Vee-validate or Vuelidate with Composition API
+UI Styling:	Tailwind CSS, transitions, dark mode toggle
+Testing:	Vitest + Vue Testing Library
+Tooling & Optimization:	Vite plugins, lint rules, bundle analysis
+Advanced:	i18n, Suspense, custom directives, render functions
+
+
 ```

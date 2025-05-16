@@ -1,11 +1,16 @@
 <template>
-  <div class="flex flex-wrap flex-grow">
-    <PostCard v-for="post in posts" :key="post.id" :post="post" />
-  </div>
+  <h1>My Vue 3 app!</h1>
+  <RedirectForm />
 </template>
-<script setup>
-import useResource from '../composables/useResource.js'
-import PostCard from "../components/PostCard.vue";
-const {items: posts, fetchAll} = useResource('posts')
-fetchAll()
+
+<script setup lang="ts">
+import RedirectForm from '../components/RedirectForm.vue'  
 </script>
+
+<style scoped>
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: Arial, sans-serif;
+}
+</style>
