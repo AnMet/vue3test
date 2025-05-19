@@ -4,7 +4,7 @@
 </template>
 
 <script setup lang="ts">
-import RedirectForm from '../components/RedirectForm.vue'  
+import RedirectForm from '@/components/RedirectForm.vue';
 </script>
 
 <style scoped>

@@ -1,11 +1,13 @@
 <template>
   <v-app>
+    <AppHeader />
+
     <router-view />
   </v-app>
 </template>
 
 <script setup lang="ts">
-// no extra logic needed here yet
+import AppHeader from './components/AppHeader.vue';
 </script>
 
 <style>

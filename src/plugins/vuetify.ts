@@ -1,12 +1,13 @@
-// src/plugins/vuetify.ts
-import 'vuetify/styles' // Import Vuetify styles
-import { createVuetify } from 'vuetify'
-import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
+import { createVuetify } from 'vuetify';
+import { aliases, mdi } from 'vuetify/iconsets/mdi';
+import 'vuetify/styles';
 
-export const vuetify = createVuetify({
+const vuetify = createVuetify({
   icons: {
     defaultSet: 'mdi',
     aliases,
     sets: { mdi },
   },
-})
+});
+
+export default vuetify;
