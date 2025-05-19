@@ -4,7 +4,7 @@
 
     <!-- <v-card-title>{{ chat.user.name }}’s Tweet</v-card-title> -->
 
-    <TweetInput v-model="tweet" :maxlength="MAX_LENGTH" />
+    <TweetInput v-model="tweet" />
     <!-- :maxlength="MAX_LENGTH" -->
 
     <p :class="{ 'text-error': remainingChars < 0 }">{{ remainingChars }} characters left</p>
