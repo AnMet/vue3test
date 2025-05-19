@@ -7,6 +7,10 @@ export const useStore = defineStore('store', {
     tweet: '',
     form: {} as Form,
   }),
+  getters: {
+    getMessages: (state) => state.messages,
+    getTweet: (state) => state.tweet,
+  },
   actions: {
     sendMessage(text: string) {
       this.messages.push({ from: 'user', text });

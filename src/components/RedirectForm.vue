@@ -21,6 +21,16 @@
 
       <v-btn type="submit" :disabled="!isFormValid">Submit</v-btn>
     </v-form>
+    <v-divider class="my-4"></v-divider>
+    <div>
+      <v-btn class="outlined my-2" @click="show = !show">Toggle</v-btn>
+
+      <!-- v-if: element is created/destroyed -->
+      <p v-if="show">This text is conditionally rendered with v-if</p>
+
+      <!-- v-show: element is always in DOM, just hidden -->
+      <p v-show="show">This text is conditionally shown with v-show</p>
+    </div>
   </v-container>
 </template>
 
@@ -35,6 +45,8 @@ const store = useStore();
 
 const formRef = ref();
 
+const show = ref(true);
+
 const form = reactive<Form>({
   user: {
     email: '',
@@ -43,14 +55,14 @@ const form = reactive<Form>({
   activity: undefined,
 });
 
-const activities: ActivityType[] = Object.values(ActivityType);
+const activities = ref<ActivityType[]>(Object.values(ActivityType));
 
 const isFormValid = computed(() => {
   return (
     form.user?.name?.trim() !== '' &&
     form.user?.email?.trim() !== '' &&
     form.activity !== undefined &&
-    activities.includes(form.activity)
+    activities.value.includes(form.activity)
   );
 });
 

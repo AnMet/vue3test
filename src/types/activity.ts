@@ -3,6 +3,7 @@ export enum ActivityType {
   form = 'form',
   tweet = 'tweet',
   advanced = 'advanced',
+  message = 'message',
 }
 
 export interface Message {
